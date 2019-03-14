@@ -1,0 +1,68 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "phone": "(912) 555-4321",
+    "location": "London, UK",
+    "profiles": [{
+      "network": "GitHub",
+      "icon": "fab fa-github",
+      "url": "github.com/user"
+    }]
+  },
+  "experience": [{
+    "company": "The Company",
+    "position": "Web developer",
+    "startDate": "11.2013",
+    "endDate": "Present",
+    "summary": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    ],
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "company": "XYZ",
+    "position": "Intern",
+    "startDate": "02.2013",
+    "endDate": "10.2013",
+    "summary": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    ],
+    "keywords": [
+      "JavaScript",
+      "Test automation"
+    ]
+  }],
+  "education": [{
+    "institution": "University",
+    "area": "Software Development",
+    "studyType": "Bachelor's degree",
+    "startDate": "01.2010",
+    "endDate": "01.2013"
+  }],
+  "skills": [{
+    "name": "Development",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+  },
+  {
+    "name": "Communication",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+  },
+  {
+    "name": "Problem solving",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+  }],
+  "languages": [{
+    "name": "English",
+    "fluency": "Native speaker"
+  }],
+  "legal": "Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO))."
+}

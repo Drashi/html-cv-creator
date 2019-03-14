@@ -1,0 +1,38 @@
+mixin contact-item(value, icon)
+  .contact-item
+    i(class=icon)
+    span= value
+
+mixin experience-item(experience)
+  .experience-item.section-item
+    .left-column
+      h3= experience.position
+      p= experience.company
+      p #{experience.startDate} - #{experience.endDate}
+      .keywords
+        each keyword in experience.keywords
+          +keyword(keyword)
+    .right-column
+      ul
+        each s in experience.summary
+          li= s
+
+mixin skills-item(skill)
+  .skills-item
+    p
+      span #{skill.name}
+      | &nbsp;- #{skill.description}
+
+mixin education-item(education)
+  .education-item.section-item
+    h3= education.institution
+    p #{education.startDate} - #{education.endDate}
+    p #{education.studyType} in #{education.area}
+
+mixin language-item(language)
+  .languages-item
+    h3= language.name
+    p= language.fluency
+
+mixin keyword(text)
+  span.keyword= text

@@ -1,0 +1,56 @@
+include mixins
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= basics.name
+
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
+  body
+    .wrapper
+      address
+        .name
+          h1= basics.name
+        .contact
+          .row
+            +contact-item(basics.email, "fas fa-envelope")
+            +contact-item(basics.phone, "fas fa-phone")
+          .row
+            +contact-item(basics.location, "fas fa-map-marker-alt")
+            +contact-item(basics.profiles[0].url, basics.profiles[0].icon)
+          each profile, index in basics.profiles
+            if index != 0 && index % 2 == 0
+              .row
+                +contact-item(basics.profiles[index].url, basics.profiles[index].icon)
+                if basics.profiles[index+1]
+                  +contact-item(basics.profiles[index+1].url, basics.profiles[index+1].icon)
+      main
+        .row
+          section#experience
+            h2 Experience
+            .experience-items.section-content
+              each item in experience
+                +experience-item(item)
+        .row
+          section#skills
+            h2 Skills
+            .skills-items.section-content
+              each item in skills
+                +skills-item(item)
+        .row
+          section#education
+            h2 Education
+            .education-items.section-content
+              each item in education
+                +education-item(item)
+          section#languages
+            h2 Languages
+            .languages-items.section-content
+              each item in languages
+                +language-item(item)
+      
+      footer= legal

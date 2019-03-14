@@ -1,0 +1,184 @@
+$bg-color: #dddddd;
+$font-color: #000000;
+
+$page-padding: 40px;
+
+$h1-font-size: 40px;
+$h2-font-size: 22px;
+$h3-font-size: 18px;
+$p-font-size: 16px;
+
+body {
+  height: 297mm;
+  width: 210mm;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  color: $font-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+address {
+  display: flex;
+  flex-direction: row;
+  background-color: $bg-color;
+  padding: 25px $page-padding;
+  font-style: normal;
+
+  .name {
+    flex: 1;
+    align-self: center;
+
+    h1 {
+      margin: 0;
+      font-size: $h1-font-size;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+
+      .contact-item {
+        margin: 10px 10px 10px 0;
+        flex: 1;
+
+        i {
+          min-width: 16px;
+          margin-right: 8px;
+          text-align: center;
+        }
+
+        i, span { font-size: 16px; }
+      }
+    }
+  }
+}
+
+main {
+  padding: 10px $page-padding 0;
+
+  h3 { font-size: $h3-font-size; }
+
+  p { font-size: $p-font-size; }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    section {
+      flex: 1;
+
+      & > h2 { font-size: $h2-font-size; }
+
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid #000000;
+        padding: 0 20px;
+
+        .section-item:not(:last-child) { padding-bottom: 25px; }
+
+        h3, p { margin: 0 0 5px; }
+      }
+    }
+
+    #experience {
+      .experience-items {
+        .experience-item {
+          display: flex;
+          flex-direction: row;
+
+          .left-column {
+            flex: 1;
+
+            .keywords {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              margin-top: 15px;
+
+              .keyword {
+                padding: 7px 8px;
+                margin: 0 10px 10px 0;
+                font-size: 12px;
+                background-color: $bg-color;
+              }
+            }
+          }
+
+          .right-column {
+            flex: 1.5;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              
+              li {
+                margin-bottom: 10px;
+                line-height: 1.2;
+
+                &:before {
+                  content: "\f0da";
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: 900;
+                  padding-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #skills {
+      .skills-items {
+        .skills-item {
+          p {
+            span { font-weight: 600; }
+          }
+
+          &:not(:last-child) { margin-bottom: 10px; }
+        }
+      }
+    }
+
+    #languages {
+      .languages-items {
+        flex-direction: row;
+        padding: 12px 20px;
+
+        .languages-item { flex: 1; }
+      }
+    }
+  }
+}
+
+footer {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 0 $page-padding 40px;
+  font-size: 12px;
+  color: #333333;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+}
